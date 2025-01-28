@@ -17,7 +17,12 @@ void printArray(int *array,int arraySize)
         index++;
     }
 }
-
+void swapNumbers(int *value1, int *value2)
+{
+    int temp=*value1;
+    *value1=*value2;
+    *value2=temp;
+}
 void bubbleSort(int *array,int arrayLength)
 {
     for(int firstIndex=0;firstIndex<arrayLength-1;firstIndex++)
