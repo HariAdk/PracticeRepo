@@ -31,7 +31,7 @@ void printNode(Node* head)
 {
     while(head!=NULL)
     {
-        printf("%d ",head->data);
+        printf("%d %s ",head->data,head->cases);
         head=head->next;
     }
 }
@@ -78,12 +78,12 @@ int main()
         char cases[100];
         int value;
         scanf("%d %[^\n]",&value,cases);
-         if (strcmp(cases, "critical") == 0) {
-            criticalNode= insertAtTail(criticalNode, value, cases);
-        } else if (strcmp(cases, "serious") == 0) {
-            seriousNode= insertAtTail(seriousNode, value, cases);
-        } else if (strcmp(cases, "stable") == 0) {
-            stableNode= insertAtTail(stableNode, value, cases);
+         if (strcmp(cases, "Critical") == 0) {
+            criticalNode= insertAtTail(criticalNode,value,"Critical");
+        } else if (strcmp(cases, "Serious") == 0) {
+            seriousNode= insertAtTail(seriousNode,value,"Serious");
+        } else if (strcmp(cases, "Stable") == 0) {
+            stableNode= insertAtTail(stableNode, value,"Stable");
         }
         index++;
     }
