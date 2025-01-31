@@ -37,31 +37,30 @@ void printNode(Node* head)
 }
 Node* mergeNodes(Node* criticalNode,Node* seriousNode, Node* stableNode)
 {
-    Node* currentNode=criticalNode;
-    if (currentNode!=NULL) {
-    
-        while (currentNode->next!=NULL) {
-            currentNode=currentNode->next;
-        }
-        currentNode->next=seriousNode;
-    } else {
-        criticalNode=seriousNode; 
-    }
-    currentNode=seriousNode;
-    if (currentNode!=NULL) {
-        while (currentNode->next!=NULL) {
-            currentNode=currentNode->next;
-        }
-        currentNode->next=stableNode;
-    } else if (criticalNode!=NULL) {
-        
+    Node* currentNode=NULL;
+    if (criticalNode!=NULL) {
         currentNode=criticalNode;
         while (currentNode->next!=NULL) {
             currentNode=currentNode->next;
         }
+        currentNode->next=seriousNode;
+        while(currentNode->next!=NULL)
+        {
+            currentNode=currentNode->next;
+        }
         currentNode->next=stableNode;
+        return criticalNode;
+    } else if(seriousNode!=NULL) {
+         currentNode=seriousNode;
+        while(currentNode->next!=NULL)
+        {
+            currentNode=currentNode->next;
+        }
+        currentNode->next=stableNode;
+        return seriousNode;
     }
-    return currentNode;
+   return stableNode;
+    
 }
 
 int main()
@@ -88,7 +87,7 @@ int main()
         index++;
     }
     headNode=mergeNodes(criticalNode,seriousNode,stableNode);
-    printNode(criticalNode);
+    printNode(headNode);
     return 0;
 
 }
