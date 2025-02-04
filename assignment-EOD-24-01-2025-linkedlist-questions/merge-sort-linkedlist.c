@@ -92,8 +92,8 @@ Node* mergeSort(Node *head)
     }
 
     Node* second=split(head);
-    mergeSort(head);
-    mergeSort(second);
+    head= mergeSort(head);
+    second=mergeSort(second);
     return merge(head,second);
 }
 
