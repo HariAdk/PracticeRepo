@@ -1,8 +1,12 @@
 {
   "version": 2,
-  "dgSpecHash": "h0dcES1s7Is=",
+  "dgSpecHash": "w8nKFTh+LMQ=",
   "success": true,
   "projectFilePath": "/home/runner/work/PracticeRepo/PracticeRepo/Agent.Runner/Agent.Runner.csproj",
-  "expectedPackageFiles": [],
+  "expectedPackageFiles": [
+    "/tmp/codeql-scratch-881d5a96dd5a42bf/dbs/csharp/working/packages/microsoft.netcore.app.ref/8.0.25/microsoft.netcore.app.ref.8.0.25.nupkg.sha512",
+    "/tmp/codeql-scratch-881d5a96dd5a42bf/dbs/csharp/working/packages/microsoft.aspnetcore.app.ref/8.0.25/microsoft.aspnetcore.app.ref.8.0.25.nupkg.sha512",
+    "/tmp/codeql-scratch-881d5a96dd5a42bf/dbs/csharp/working/packages/microsoft.netcore.app.host.linux-x64/8.0.25/microsoft.netcore.app.host.linux-x64.8.0.25.nupkg.sha512"
+  ],
   "logs": []
 }

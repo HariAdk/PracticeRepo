@@ -8,7 +8,7 @@ Every design decision is guided by the **SOLID** principles and standard C# nami
 ## Solution Structure
 
 ```
-Agent.sln
+Agent.slnx
 ├── Agent.Core/          # Class library — netstandard2.0 (compatible with .NET 4.8 & .NET Core)
 │   ├── Abstractions/    # Interfaces (IAgent, IAgentTask, ITaskExecutor, ITaskPlanner, …)
 │   ├── Models/          # Value objects (AgentTask, TaskResult, AgentConfiguration)
